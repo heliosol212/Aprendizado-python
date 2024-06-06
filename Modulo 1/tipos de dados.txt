@@ -1,0 +1,7 @@
+# Tipo numerico: int(numeros reais), float(numeros reais), complex
+# Tipo texto: str
+# Tipo sequencia (strings): list, tuple, range
+# Tipo mapa: dict
+# Tipo coleçao: set, fronzenset
+# Tipo booleano: bool
+# tipo binário: bytes, bytearray, memoryview
