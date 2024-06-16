@@ -56,3 +56,12 @@ def sacar():
 
 # Chamada da função sacar
 print(sacar())
+
+
+
+
+#Nota: Para chamar uma variável para dentro de uma string, use a funçao 'f' antes de qualquer string
+#Exemplo:
+
+c = "sexoo"
+print(f"a variavel 'c' tem esse valor: '{c}'")
