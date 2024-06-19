@@ -40,6 +40,19 @@ def verificar_senha():
         else:
             print("Senha incorreta. Tente novamente.")
 
+def deseja_outra_operacao():
+    while True:
+        resposta = input("Deseja realizar outra operação? (S/N): ").strip().upper()
+        if resposta == 'S':
+            return True
+        elif resposta == 'N':
+            return False
+        else:
+            print("Resposta inválida. Por favor, digite 'S' para Sim ou 'N' para Não.")
+
+def saldo_insuficiente():
+    print("O saque não foi realizado, saldo insuficiente.")
+
 def sacar():
     if not verificar_senha():
         return "Acesso negado, senha incorreta."
@@ -50,18 +63,20 @@ def sacar():
     
     if saldo >= saque_inicial:
         saldo -= saque_inicial
-        return f"Saque realizado com sucesso. Saldo restante: {saldo}"
+        print(f"Saque realizado com sucesso. Saldo restante: {saldo}")
     else:
-        return "O saque não foi realizado, saldo insuficiente"
+        saldo_insuficiente()
+
+    if deseja_outra_operacao():
+        sacar()
+    else:
+        return "Operação finalizada."
 
 # Chamada da função sacar
 print(sacar())
 
-
-
-
 #Nota: Para chamar uma variável para dentro de uma string, use a funçao 'f' antes de qualquer string
 #Exemplo:
 
-c = "sexoo"
-print(f"a variavel 'c' tem esse valor: '{c}'")
+#c = "sexoo"
+#print(f"a variavel 'c' tem esse valor: '{c}'")
